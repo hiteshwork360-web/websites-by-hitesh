@@ -1,0 +1,19 @@
+# FixTwin
+
+> FixTwin is a small Human + AI studio run by Hitesh Gahlot. It fixes the small things that cost owner-run businesses customers: outdated or broken websites, missing online booking, missed appointments, slow client onboarding and few Google reviews. It serves the US, UK and India.
+
+## Services
+- Websites: fast, mobile-friendly sites; fixes for broken links, wrong phone numbers, template leftovers and old footers.
+- Online booking: works with existing tools (Gingr, Time To Pet, Calendly, Practo, plain calendars).
+- Reminders: automatic text, email or WhatsApp reminders before appointments.
+- Client onboarding: one online form for details, ID, documents and signatures.
+- Review requests: an automatic polite review request after each visit.
+- Small custom apps for jobs done by hand.
+
+## Who it is for
+- Pet businesses: groomers, daycares, boarding, pet sitters, trainers.
+- Accountants and professional firms: document chasing, deadline reminders, onboarding.
+- Clinics in India: dental, ENT, skin, eye, physiotherapy, children's clinics; WhatsApp booking and reminders.
+
+## Start
+- Free website check: email hitesh.work360@gmail.com with your website address. A short list of fixes comes back within 2 working days.
