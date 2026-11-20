@@ -8,6 +8,7 @@ Sources that work from the cloud session (checked 21 Nov 2026):
 Reddit and X block direct reading here; search them with the WebSearch tool
 (e.g. 'site:reddit.com r/doggrooming booking', 'site:x.com MoeGo') and log dates.
 Every item is printed with its date so decisions can cite it.
+Owner rule (21 Nov 2026): signals older than 15 days are never used, so --days is capped at 15.
 """
 import json, re, sys, urllib.parse, urllib.request
 from html import unescape
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     days = 7
     if "--days" in args:
-        i = args.index("--days"); days = int(args[i + 1]); del args[i:i + 2]
+        i = args.index("--days"); days = min(int(args[i + 1]), 15); del args[i:i + 2]  # owner rule: never older than 15 days
     use_hn = "--hn" in args
     if use_hn: args.remove("--hn")
     region = "IN"
