@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sample PG, Manikonda | FixTwin demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1d21;--muted:#5b616b;--line:#e6e2da;--bg:#fbfaf7;--wa:#1f8f4e;--accent:#1f6f5c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.banner{background:#fff6d6;border-bottom:1px solid #eadfae;font-size:13px;padding:8px 16px;text-align:center}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 96px}
+.hero{height:190px;border-radius:14px;margin:16px 0;background:linear-gradient(135deg,#d9e7e2,#b9d3ca);display:grid;place-items:center;color:#2b4a40;font-weight:600}
+h1{font-size:26px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 12px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px}
+.card h2{font-size:16px;margin:0 0 8px}
+table{width:100%;border-collapse:collapse;font-size:15px}td{padding:6px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-weight:600}
+ul{margin:0;padding-left:18px}.hi{color:var(--muted);font-size:14px}
+.wa{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:12px 16px}
+.wa a{display:block;max-width:560px;margin:0 auto;background:var(--wa);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;text-decoration:none}
+.foot{font-size:12px;color:var(--muted);text-align:center;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="banner">Sample page by FixTwin, showing what your PG's page could look like. Not a real PG.</div>
+<div class="wrap">
+  <div class="hero">Your real photos go here (rooms, food, building)</div>
+  <h1>Sample PG for Men</h1>
+  <p class="sub">Near Manikonda main road · 10 min to Gachibowli and HITEC City</p>
+  <div class="tags"><span class="tag">Boys</span><span class="tag">Food included</span><span class="tag">Wi-Fi</span><span class="tag">AC and non-AC</span></div>
+
+  <div class="card"><h2>Rent per month <span class="hi">/ मासिक किराया</span></h2>
+    <table>
+      <tr><td>3 sharing</td><td>₹7,000</td></tr>
+      <tr><td>2 sharing</td><td>₹9,000</td></tr>
+      <tr><td>Single room</td><td>₹13,000</td></tr>
+      <tr><td>Deposit</td><td>1 month</td></tr>
+    </table>
+    <p class="hi" style="margin:8px 0 0">Example prices only. Your real rents go here.</p>
+  </div>
+
+  <div class="card"><h2>What's included <span class="hi">/ सुविधाएँ</span></h2>
+    <ul><li>3 meals a day (veg and non-veg)</li><li>Wi-Fi, power backup, hot water</li><li>Daily housekeeping, washing machine</li><li>CCTV, biometric entry</li></ul>
+  </div>
+
+  <div class="card"><h2>Beds available now <span class="hi">/ अभी खाली बेड</span></h2>
+    <p style="margin:0">2 sharing: <b>1 bed</b> · 3 sharing: <b>2 beds</b></p>
+    <p class="hi" style="margin:6px 0 0">Updated by the owner on WhatsApp in 10 seconds.</p>
+  </div>
+
+  <div class="card"><h2>Location <span class="hi">/ पता</span></h2>
+    <p style="margin:0">Your Google Maps pin goes here, with directions from the nearest landmark and bus stop.</p>
+  </div>
+
+  <p class="foot">Built by FixTwin · fixtwin.vercel.app</p>
+</div>
+<div class="wa"><a href="#" onclick="alert('In your page, this opens WhatsApp with: Hi, is a bed available? I saw your page.');return false;">Check availability on WhatsApp</a></div>
+</body>
+</html>
