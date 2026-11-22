@@ -13,6 +13,12 @@ Owner rule (21 Nov 2026): signals older than 15 days are never used, so --days i
 import json, re, sys, urllib.parse, urllib.request
 from html import unescape
 
+# Windows consoles default to cp1252; headlines with symbols such as the rupee sign crashed the print.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 FixTwinPulse/1.0"})
     with urllib.request.urlopen(req, timeout=25) as r:
