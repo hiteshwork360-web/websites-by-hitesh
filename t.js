@@ -5,8 +5,8 @@
    Each demo page belongs to one business, so counts per page = what that lead did.
    ?ft=internal marks this browser as ours (never tracked again); ?ft=debug logs events to the console instead of sending. */
 (function () {
-  var CFG = { key: "", host: "https://us.i.posthog.com" };
-  var q = location.search, debug = /[?&]ft=debug\b/.test(q);
+  var CFG = { key: "phc_tv7yMboPrSBEtKKURwGRVkB8n2Lk9FwHzLpskuzVmkJB", host: "https://us.i.posthog.com" }; // public project key (PostHog project 767863)
+  var q = location.search, debug = /[?&]ft=debug\b/.test(q), test = /[?&]ft=test\b/.test(q);
   try {
     if (/[?&]ft=internal\b/.test(q)) localStorage.setItem("ft_internal", "1");
     if (!debug && localStorage.getItem("ft_internal") === "1") return;
@@ -20,6 +20,7 @@
 
   function send(event, props) {
     var p = { page: page, open_id: openId, $current_url: location.origin + page, $process_person_profile: false };
+    if (test) p.test = true; // ?ft=test: a real send that the stats script leaves out
     for (var k in props || {}) p[k] = props[k];
     var body = JSON.stringify({ api_key: CFG.key, event: event, distinct_id: openId, properties: p, timestamp: new Date().toISOString() });
     if (debug) { console.log("[ft]", event, p); return; }
