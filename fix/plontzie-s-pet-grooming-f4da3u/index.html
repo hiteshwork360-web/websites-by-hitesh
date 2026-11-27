@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Plontzie&#x27;s Pet Grooming: email fix | FixTwin</title>
+<meta name="description" content="A private fix page prepared for Plontzie&#x27;s Pet Grooming by FixTwin.">
+<style>:root{--bg:#fbfaf7;--ink:#1b1d21;--muted:#5b616b;--line:#e6e2da;--accent:#1f6f5c;--card:#fff;--soft:#eef5f2;--warn:#8a5a00;--warnbg:#fff6e0}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--accent)}.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line)}nav{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:15px}.logo{font-weight:700}
+.hero{padding:40px 0 24px}.tag{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);background:var(--soft);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-.02em;margin:0 0 12px}.hero p{font-size:17px;color:var(--muted);margin:0}
+section{padding:28px 0;border-top:1px solid var(--line)}h2{font-size:22px;margin:0 0 6px}h3{font-size:17px;margin:18px 0 6px}.lead{color:var(--muted);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:10px 0}
+.find{border-left:4px solid var(--warn);background:var(--warnbg);border-radius:8px;padding:12px 14px;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:600}
+code,.val{font-family:ui-monospace,Consolas,monospace;font-size:13px;background:#f3f1ec;padding:2px 6px;border-radius:6px;word-break:break-all}
+.copy{margin-left:6px;font-size:12px;border:1px solid var(--line);background:#fff;border-radius:6px;padding:2px 8px;cursor:pointer}
+ol li,ul li{margin:6px 0}.thumb{width:96px;height:64px;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:#eee}
+.cta{background:var(--soft);border:1px solid #cfe3dc;border-radius:12px;padding:18px}.small{font-size:13px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--muted)}</style></head><body>
+<header><div class="wrap"><nav><span class="logo">FixTwin</span><span class="small">Prepared for Plontzie&#x27;s Pet Grooming &middot; 28 Nov 2026</span></nav></div></header>
+<main class="wrap"><div class="hero"><span class="tag">Free email check</span><h1>Your email check: plontzies.com</h1><p>1 thing to fix, and the exact fix is below. It takes about 10 minutes, free.</p></div>
+<section><h2>What I found</h2><p class="lead">I checked the public email records of <b>plontzies.com</b> on 28 Nov 2026. Your email runs on <b>Microsoft 365</b>, and your DNS is at <b>GoDaddy</b>.</p>
+<div class="find"><b>No DMARC record</b><br>Nothing tells Gmail, Outlook or Yahoo what to do with email that pretends to come from plontzies.com, so scam emails that fake your address (anything@plontzies.com) are not blocked, and your real emails carry less proof that they are from you.</div><p class="small">Check it yourself in 30 seconds: <a href="https://mxtoolbox.com/SuperTool.aspx?action=dmarc%3Aplontzies.com" rel="nofollow">MXToolbox lookup for plontzies.com</a> (free).</p></section>
+<section><h2>The fix, ready to copy</h2><p class="lead">About 10 minutes. You change nothing on your website or your mailbox.</p>
+<div class="card"><table><tr><th>Type</th><th>Name / Host</th><th>Value</th><th>Action</th></tr><tr><td>TXT</td><td><span class="val">_dmarc</span><button class="copy" data-v="_dmarc">Copy</button></td><td><span class="val">v=DMARC1; p=none; rua=mailto:info@plontzies.com;</span><button class="copy" data-v="v=DMARC1; p=none; rua=mailto:info@plontzies.com;">Copy</button></td><td>Add (new)</td></tr></table>
+<p class="small">TTL: leave the default (1 hour is fine). Some hosts want the full name, e.g. <code>_dmarc.plontzies.com</code> instead of <code>_dmarc</code>.</p></div>
+<h3>Where to click in GoDaddy</h3><ol><li>Sign in to GoDaddy, open <b>My Products</b>, choose <b>DNS</b> next to <b>plontzies.com</b>, then <b>Add New Record</b>.</li>
+<li>For each row above: choose type <b>TXT</b>, paste the <b>Name / Host</b> and the <b>Value</b>, and save.</li>
+<li>Wait about an hour, then open the <a href="https://mxtoolbox.com/SuperTool.aspx?action=dmarc%3Aplontzies.com" rel="nofollow">MXToolbox check</a> again: it should show a pass.</li></ol>
+<h3>Also worth doing: turn on DKIM in Microsoft 365 (5 minutes)</h3><ol><li>Open <b>security.microsoft.com</b> &rarr; <b>Email &amp; collaboration</b> &rarr; <b>Policies &amp; rules</b> &rarr; <b>Threat policies</b> &rarr; <b>Email authentication settings</b> &rarr; <b>DKIM</b>.</li><li>Select plontzies.com; Microsoft shows two CNAME records (<code>selector1._domainkey</code> and <code>selector2._domainkey</code>). Add both in your DNS.</li><li>Come back and switch on <b>Sign messages for this domain with DKIM signatures</b>.</li></ol><h3>In 2 to 4 weeks: switch on the protection</h3><p>The DMARC record above starts in safe monitoring mode (<code>p=none</code>): nothing about your own email changes. Daily reports will arrive at info@plontzies.com. Once your SPF passes, change <code>p=none</code> to <code>p=quarantine</code>. That is the step that sends fake emails using your name to spam. Reply to my email if you want me to read the reports with you first.</p></section>
+<section><div class="cta"><h2>Short on time?</h2><p style="margin:0">Just reply to the email I sent you and I will do it with you on a short screen share, on your own login. I never ask for your password.<br>
+Need anything else in digital or IT (website, booking, Google profile, automation)? Reply with what you need.</p></div></section>
+</main>
+<footer><div class="wrap">Hitesh Gahlot &middot; FixTwin: Human + AI fixes for small businesses &middot; Kailashnagar @ Las, Harji Sirohi Road, Rajasthan 307801, India<br>
+This page is private and not listed on search engines. Reply to my email and I will delete it.</div></footer>
+<script>document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-v');
+(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)},function(){b.textContent='Select and copy'})})})</script>
+<script src="/t.js" defer></script></body></html>
